@@ -34,3 +34,7 @@ sh ./deploy_local.sh
 # 2. Container 가 바라보는 DB 초기화
 sh init_db_local_container.sh 
 ```
+
+### API 명세
+서버 실행 후, 아래 URL로 접속하면 API 명세를 확인할 수 있다.
+http://0.0.0.0:8000/docs
