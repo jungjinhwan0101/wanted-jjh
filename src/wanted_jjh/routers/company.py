@@ -21,7 +21,10 @@ router = APIRouter()
 
 
 @router.get(
-    "/search", response_model=list[CompanySearchSchema], name="company:search-by-name"
+    "/search",
+    response_model=list[CompanySearchSchema],
+    name="company:search-by-name",
+    summary="회사명 자동완성을 위한 회사명 검색",
 )
 def search_company_by_name(
     query: str,
@@ -41,7 +44,10 @@ def search_company_by_name(
 
 
 @router.get(
-    "/tags", response_model=list[CompanySearchSchema], name="company:search-by-tag"
+    "/tags",
+    response_model=list[CompanySearchSchema],
+    name="company:search-by-tag",
+    summary="태그명으로 회사 검색",
 )
 def search_company_by_tag(
     query: str,
@@ -67,6 +73,7 @@ def search_company_by_tag(
     "/companies/{company_name}",
     response_model=CompanySchema,
     name="company:get-company",
+    summary="회사 이름으로 회사 검색",
 )
 def get_company(
     company_name: str,
@@ -89,6 +96,7 @@ def get_company(
     "/companies",
     response_model=CompanySchema,
     name="company:add-company",
+    summary="새로운 회사 추가",
 )
 def add_company(
     company_create_request_dto: CompanyCreateSchema,
@@ -121,6 +129,7 @@ def add_company(
     "/companies/{company_name}/tags",
     response_model=CompanySchema,
     name="company:update-company-tags",
+    summary="회사 태그 정보 추가",
 )
 def update_company_tags(
     company_name: str,
@@ -153,6 +162,7 @@ def update_company_tags(
     "/companies/{company_name}/tags/{tag_name}",
     response_model=CompanySchema,
     name="company:delete-company-tag",
+    summary="회사 태그 정보 삭제",
 )
 def delete_company_tag(
     company_name: str,
