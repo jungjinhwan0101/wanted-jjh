@@ -24,6 +24,9 @@ poetry run python data/setup_init_db.py
 
 # 서버 실행(8000번 포트로 FastAPI 서버가 실행된다)
 poetry run python src/wanted_jjh/cli.py
+
+# code format & lint check
+poetry run ruff check src/
 ```
 
 ### 로컬 Docker Container 서버 배포방법
@@ -36,5 +39,5 @@ sh init_db_local_container.sh
 ```
 
 ### API 명세
-서버 실행 후, 아래 URL로 접속하면 API 명세를 확인할 수 있다.
+서버 실행 후, 다음의 URL로 접속하면 API 명세를 확인할 수 있다.
 http://0.0.0.0:8000/docs
