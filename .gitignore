@@ -1,0 +1,4 @@
+.idea
+*.sqlite
+__pycache__
+.python-version

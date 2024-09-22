@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "wanted_jjh"
+version = "0.1.0"
+description = ""
+authors = ["JungJinHwan <jungjinhwan0101@gmail.co.kr>"]
+packages = [
+    { include = "wanted_jjh", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = {extras = ["standard"], version = "^0.115.0"}
+sqlalchemy = "^2.0.35"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+ruff = "^0.6.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = ["-vv", "-s"]
