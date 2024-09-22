@@ -152,8 +152,8 @@ def test_new_company(api: TestClient):
         "company_name": "LINE FRESH",
         "tags": [
             "tag_1",
-            "tag_8",
             "tag_15",
+            "tag_8",
         ],
     }
 

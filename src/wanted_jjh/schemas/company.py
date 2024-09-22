@@ -5,10 +5,15 @@ class CompanySearchSchema(BaseModel):
     company_name: str
 
 
+class CompanySchema(BaseModel):
+    company_name: str
+    tags: list[str]
+
+
 class LanguageCodeSchema(BaseModel):
     ko: str | None = None
     en: str | None = None
-    jp: str | None = None
+    ja: str | None = None
     tw: str | None = None
 
 
